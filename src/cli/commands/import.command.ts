@@ -1,5 +1,5 @@
 /*
-  Команда --import импортирует данные из tsv
+  Команда --import импортирует данные из tsv;
 */
 
 import { Command } from './command.interface.js';
