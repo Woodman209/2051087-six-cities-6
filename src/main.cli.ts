@@ -5,6 +5,7 @@
     npm run ts ./src/main.cli.ts -- --import ./mocks/mock-data.tsv
 */
 import { CLIApplication, VersionCommand, HelpCommand, ImportCommand, GenerateCommand } from './cli/index.js';
+import 'reflect-metadata';
 
 function bootstrap() {
   const cliApplication = new CLIApplication();
