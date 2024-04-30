@@ -1,0 +1,160 @@
+openapi: 3.1.0
+info:
+  title: API сервер для демо-проекта «Шесть городов».
+  description: |-
+    * Список ресурсов и маршрутов сервера «Шесть городов».
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  version: 2.0.0
+tags:
+  - name: offers
+    description: Действия с объявлениями
+  - name: users
+    description: Действия с пользователями
+  - name: comments
+    description: Действия с комметариями
+
+paths:
+  /users/register:
+    post:
+      tags:
+        - users
+      summary: Регистрация пользователя
+      description: Регистрирует нового пользователя
+
+      requestBody:
+        description: Информация для создания нового пользователя
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/createUser"
+        required: true
+
+      responses:
+        "201":
+          description: Пользователь зарегистрирован.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/user"
+
+        "409":
+          description: Пользователь с таким email уже существует.
+
+  /users/login:
+    post:
+      tags:
+        - users
+      summary: Авторизация пользователя
+      description: Авторизует пользователя на основе логина и пароля
+
+    get:
+      tags:
+        - users
+      summary: Проверка состояния пользователя
+      description: Возвращает информацию по авторизованному пользователя
+  /users/logout:
+    post:
+      tags:
+        - users
+      summary: Завершение пользовательского сеанса
+      description: Завершает пользовательский сеанс, если авторизация выполняется на основе сессий
+
+  /offers:
+    get:
+      tags:
+        - offers
+      summary: Получение списка предложений
+      description: Получает список предложений об аренде
+
+    post:
+      tags:
+        - offers
+      summary: Создание предложения
+      description: Создает предложение об аренде
+  /offers/{offerId}:
+    get:
+      tags:
+        - offers
+      summary: Детальная информация по предложению
+      description: Получает детальную информацию по предложению
+
+    delete:
+      tags:
+        - offers
+      summary: Удаление предложения по аренде
+      description: Удаляет предложение по аренде
+
+    put:
+      tags:
+        - offers
+      summary: Редактирование предложения
+      description: Редактирует предложение по аренде
+  /offers/premium/{city}:
+    get:
+      tags:
+        - offers
+      summary: Премиальные предложения для города
+      description: Получает премиальные предложения для города
+  /offers/favorites:
+    get:
+      tags:
+        - offers
+      summary: Список избранных предложений
+      description: Получает список предложений, добавленных в избранное
+    post:
+      tags:
+        - offers
+      summary: Добавление в список избранного
+      description: Добавляет предложение в список избранного
+  /offers/favorites/{offerId}:
+    delete:
+      tags:
+        - offers
+      summary: Удаление из списка избранного
+      description: Удаляет предложение из списка избранного
+  /comments/{offerId}:
+    get:
+      tags:
+        - comments
+      summary: Список комментариев для предложения
+      description: Получает список комментариев для предложения
+    post:
+      tags:
+        - comments
+      summary: Добавление комментария по аренде
+      description: Добавляет комментарий к определенному предложению по аренде
+
+components:
+  schemas:
+    createUser:
+      type: object
+
+      properties:
+        email:
+          type: string
+          example: diaz209@gmail.com
+
+        password:
+          type: string
+          example: 123456
+
+        first_name:
+          type: string
+          example: nick
+
+        last_name:
+          type: string
+          example: diaz
+    user:
+      type: object
+
+      properties:
+        id:
+          type: string
+          example: fiohwpfi4399
+
+        email:
+          type: string
+          example: diaz209@gmail.com

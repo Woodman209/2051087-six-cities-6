@@ -1,0 +1,130 @@
+{
+  "api": {
+    "titles": [
+      "Наименование1",
+      "Наименование2",
+      "Наименование3"
+    ],
+    "descriptions": [
+      "Описание предложения.Минимальная длина 20 символов1",
+      "Описание предложения.Минимальная длина 20 символов2",
+      "Описание предложения.Минимальная длина 20 символов3"
+    ],
+    "createdAtDates": [
+      "2024-01-01",
+      "2024-01-02",
+      "2024-01-03"
+    ],
+    "premiumStatuses": [
+      true,
+      false
+    ],
+    "favoriteStatuses": [
+      true,
+      false
+    ],
+    "housing": [
+      "apartment",
+      "house",
+      "room",
+      "hotel"
+    ],
+    "facilities": [
+      "Breakfast",
+      "Air conditioning",
+      "Laptop friendly workspace",
+      "Baby seat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "cities": [
+      {
+        "name": "Paris",
+        "location": {
+          "latitude": "48.85661",
+          "longitude": "2.351499"
+        }
+      },
+      {
+        "name": "Cologne",
+        "location": {
+          "latitude": "60.12131",
+          "longitude": "3.12312"
+        }
+      },
+      {
+        "name": "Brussels",
+        "location": {
+          "latitude": "78.121",
+          "longitude": "10.112"
+        }
+      }
+    ],
+    "rentals": [
+      {
+        "rentalName": "Описание1",
+        "createdAt": "2024-01-27",
+        "price": 100
+      },
+      {
+        "rentalName": "Описание2",
+        "createdAt": "2024-01-24",
+        "price": 103
+      },
+      {
+        "rentalName": "Описание3",
+        "createdAt": "2024-01-21",
+        "price": 124
+      }
+    ],
+    "previews": [
+      "hotel_preview.jpg",
+      "beach-hotel_preview.jpg",
+      "sunset_hotel_preview.jpg"
+    ],
+    "images": [
+      "hotel-01.jpg",
+      "hotel-02.jpg",
+      "hotel-03.jpg"
+    ],
+    "users": [
+      {
+        "name": "Nick Diaz",
+        "email": "hoodieMontana1@gmail.com",
+        "avatar": "avatar1.jpg",
+        "password": "123",
+        "userType": "common"
+      },
+      {
+        "name": "Nate Diaz",
+        "email": "hoodieMontana2@gmail.com",
+        "avatar": "avatar2.jpg",
+        "password": "123",
+        "userType": "pro"
+      },
+      {
+        "name": "Jon Jones",
+        "email": "hoodieMontana3@gmail.com",
+        "avatar": "avatar3.jpg",
+        "password": "123",
+        "userType": "common"
+      }
+    ],
+    "names": [
+      "Nick Diaz",
+      "Nate Diaz",
+      "Jon Jones"
+    ],
+    "emails": [
+      "hoodieMontana1@gmail.com",
+      "hoodieMontana2@gmail.com",
+      "hoodieMontana3@gmail.com"
+    ],
+    "avatars": [
+      "avatar1.jpg",
+      "avatar2.jpg",
+      "avatar3.jpg"
+    ]
+  }
+}
